@@ -2,6 +2,8 @@
 
 Welcome to **Bot Battlr** – the ultimate app for creating your own Bot Army! This React application allows users to browse through a list of bots, view details, enlist them into their army, and manage the enlisted bots.
 
+https://bot-gw77eq6hd-weddys-projects-bb6f16be.vercel.app
+
 ## Table of Contents
 
 - [Features](#features)
