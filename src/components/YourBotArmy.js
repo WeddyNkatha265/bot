@@ -1,6 +1,7 @@
 import React from 'react';
 import BotCard from './BotCard';
 
+// Component to display the user's enlisted bots
 function YourBotArmy({ army, onRelease, onDischarge }) {
   return (
     <div className="your-bot-army">
