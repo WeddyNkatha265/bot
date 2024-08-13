@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component to display individual bot details
 function BotCard({ bot, onEnlist, onClick, onDischarge }) {
   return (
     <div className="bot-card">
