@@ -1,22 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import BotCard from './BotCard';
 
-function BotCollection({ bots, setArmy, army, deleteBot }) {
-  const enlistBot = (bot) => {
-    if (!army.find(armyBot => armyBot.id === bot.id)) {
-      setArmy([...army, bot]);
-    }
-  };
+function BotCollection({ onEnlist }) {
+  const [bots, setBots] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8001/bots')
+      .then(response => response.json())
+      .then(data => setBots(data));
+  }, []);
 
   return (
     <div className="bot-collection">
       {bots.map(bot => (
-        <BotCard
-          key={bot.id}
-          bot={bot}
-          handleClick={() => enlistBot(bot)}
-          handleDelete={() => deleteBot(bot.id)}
-        />
+        <BotCard key={bot.id} bot={bot} onEnlist={onEnlist} />
       ))}
     </div>
   );
